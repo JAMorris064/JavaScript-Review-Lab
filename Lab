@@ -1,0 +1,316 @@
+// *I: Variables & Datatypes
+
+// A: Q&A
+
+// 1. How do we assign a value to a variable?
+// Assignment operators, such as =
+
+// 2. How do we change the value of a variable?
+// if var is defined as const, erase the old var and input the new var; if var is defined as let, either erase and replace or write a new var statement.
+
+// 3. How do we assign an existing variable to a new variable?
+// let var = newVar
+
+// 4. Remind me, what are declare, assign, and define?
+// declare is the type (let/const) and variableName; assign     is the operator; define is the given value
+
+// 5. What is pseudocoding and why should you do it?
+// Psuedocoding is writing out what you want your program to     do, step by step. It's a good idea because it will help       you solve the problem, allowing you to build a blueprint      for the code you will actually need.
+
+// 6. What percentage of time should be spent thinking about how you're going to solva a problem vs. actually typing in code to solve it?
+// More time should be spent thinking about how to solve the problem/pseudocoding. Once you've done that, coding will      be a matter of translating the solution so the computer       can understand it.   
+// */
+
+// B: Strings
+let firstVariable = "Hello World"
+console.log(firstVariable)
+
+firstVariable = 64
+console.log(firstVariable)
+
+let secondVariable = firstVariable
+console.log(secondVariable)
+
+secondVariable = "Hello again"
+console.log(secondVariable)
+console.log(firstVariable)
+//val back to 64, b/c secVar no longer the same as firstVar
+
+let yourName = "Joshua A Morris."
+console.log("Hello, my name is", yourName)
+
+// C: Booleans
+const a = 4;
+const b = 53;
+const c = 57;
+const d = 16;
+const e = 'Kevin';
+
+console.log(a < b);
+console.log(c > d);
+console.log(e == 'Kevin');
+console.log(true || false);
+console.log(false && false && false && false && false || true);
+console.log(false == false)
+console.log(e === 'Kevin');
+console.log(a !== b !== c); 
+console.log(a * a === d); 
+console.log(48 == '48');
+
+// D: The farm
+let animal = "monkey";
+if (animal === "cow"){
+  console.log("moooooo")
+} else {
+  console.log("Hey! You're not a cow!")
+}
+
+// E: Driver's Ed
+let age = 16
+if (age >= 16){
+  console.log("Here are the keys!")
+} else {
+  console.log("Sorry, you're too young.")
+}
+
+// II: Loops
+
+// A: The basics
+for(let num = 0; num <= 10; num++)
+  console.log(num)
+for(let num = 10; num <= 400; num++)
+  console.log(num)
+for(let num = 12; num <= 400; num += 3)
+  console.log(num)
+
+// B: Get even
+for(let num = 0; num <= 100; num++)
+  if (num % 2 === 0){
+  console.log((num), " is an even number.")
+  } else {
+    console.log(num)
+  }
+
+// C: Give me Five
+for(let num = 1; num <= 100; num++)
+  if (num % 3 === 0 && num % 5 === 0) {
+    console.log("I found a " + num + ". Three is a crowd. High five!")
+  } else if (num % 3 === 0) {
+    console.log("I found a " + num + ". Three is a crowd.")
+  } else if (num % 5 === 0){
+  console.log("I found a " + num + ". High five!")
+  }
+
+
+// D: Savings account
+// var num = [];
+// // var sum = 0;
+// // var multiply = 1;
+// for(let num = 0; num <= 400; num++){
+//   num += parseInt(nums[num])
+// }
+// console.log(num)
+
+
+// III: Arrays & Control flow
+
+// A: Talk about it:
+
+// 1. What are the things in an array called?
+//   Elements
+
+// 2. Do Arrays guarantee those things will be in order?
+//   No
+
+// 3. What real-life thing could you model with an array?
+//   My books
+
+// B: Easy does it
+var quotes = ['alia iacta est', 'veni vidi vici', 'carthago delenda est']
+console.log(quotes)
+
+// C: Accessing elements
+
+const randomThings = [1, 10, "Hello", true]
+
+let firstThing = randomThings[0];
+console.log(firstThing)
+
+randomThings.splice(2,1,"World")
+console.log(randomThings)
+
+// D: Change Values
+const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"]
+
+let third = ourClass[2];
+console.log(third)
+
+ourClass.splice(4,1,"OctoCat")
+ourClass.push('Cloud City')
+console.log(ourClass)
+
+// E: Mix it up
+const myArray = [5, 10, 500, 20]
+
+myArray.push("Egon", "Carrot")
+console.log(myArray)
+
+myArray.shift(5)
+console.log(myArray)
+
+myArray.unshift("Bob Marley")
+console.log(myArray)
+myArray.pop("Carrot")
+// another option, if it's just the last element, rather than a specific one: myArray.pop(myArray[myArray.length + 1])
+console.log(myArray)
+
+myArray.reverse()
+console.log(myArray)
+
+// F: Biggie Smalls
+
+let int = '112'
+
+if (int < 100) {
+  console.log(int, "is a little number.")
+} else {
+  console.log(int, "is a big number.")
+}
+
+// G: Monkey in the Middle
+
+let int2 = '7'
+
+if (int2 < 5){
+  console.log(int2, "is a small number.")
+} else if (int2 > 10){
+  console.log(int2, "is a big number.")
+} else {
+  console.log("Monkey!")
+}
+
+// H: What's in Your Closet?
+
+const kristynsCloset = [
+  "left shoe",
+  "cowboy boots",
+  "right sock",
+  "GA hoodie",
+  "green pants",
+  "yellow knit hat",
+  "marshmallow peeps"
+];
+
+const thomsCloset = [
+  [
+    "grey button-up",
+    "dark grey button-up",
+    "light blue button-up",
+    "blue button-up",
+  ],[
+    "grey jeans",
+    "jeans",
+    "PJs"
+  ],[
+    "wool mittens",
+    "wool scarf",
+    "raybans"
+  ]
+];
+
+let wearingToday = kristynsCloset[2]
+console.log("Kristyn is rocking that " + wearingToday + " today!")
+
+kristynsCloset.splice(5, 0, "raybans")
+console.log(kristynsCloset)
+
+kristynsCloset.splice(6, 1, "stained knit hat")
+console.log(kristynsCloset)
+
+let thomsShirt = thomsCloset[0][1];
+let thomsPants = thomsCloset[1][2];
+let thomsAccs = thomsCloset[2][0]
+
+console.log("Thom looks ridiculous in his " + thomsShirt + ", " + thomsPants + ", and " + thomsAccs + ".")
+
+thomsCloset[1].splice([2], 1, "Footie Pajamas")
+console.log(thomsCloset)
+
+// IV: Functions
+
+// A: pringGreeting
+
+function printGreeting(name) {
+  return ("Hello there, " + name + "!")
+}
+  console.log(printGreeting("Slimer"))
+ 
+//B: printCool
+
+function printCool(name) {
+  return (name + " is cool.")
+}
+console.log(printCool("Captain Reynolds"))
+
+//C: calculateCube
+
+function calculateCube(number){
+  return (Math.pow(number, 3))
+}
+console.log(calculateCube(5))
+  
+
+//D: isVowel
+// function isVowel(char){}
+// console.log(isVowel("a"));
+
+
+// E: getTwoLengths
+
+function getTwoLengths(name, name2){
+  return [name.length, name2.length]
+}
+console.log(getTwoLengths("Hank", "Hippopopalous"));
+
+
+// F: getMultipleLengths
+// function getMultipleLengths(arr){
+//   let resultArray = [];
+//     arr.forEac
+//   return [word.length]
+// }
+// console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+
+
+// OBJECTS 
+
+const user = {
+  name: "Josh",
+  email: "Josh123",
+  age: 29,
+  purchased: [],
+}
+console.log (user)
+
+user.email = "Morris123"
+console.log(user)
+
+user.location = "Leavenworth, KS"
+console.log(user)
+
+user.purchased.push("carbohydrates", "Peace of Mind", "Merino jodhpurs")
+console.log(user.purchased[2])
+
+user.friend = {
+  name: "Natalie",
+  age: 25,
+  location: "KCMO",
+  purchased: []
+}
+console.log(user.friend.name)
+console.log(user.friend.location)
+
+user.friend.age = 55
+
+user.friend.purchased.push("The One Ring", "A latte")
+console.log(user.friend.purchased[1])
